@@ -20,6 +20,24 @@
 		</form>
 
 		<script type="text/javascript" src="./script.js">
+			// script.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the button element
+    var removeButton = document.querySelector('input[type="button"]');
+    
+    // Add click event listener to the button
+    removeButton.addEventListener('click', removeColor);
+});
+
+function removeColor() {
+    var colorSelect = document.getElementById("colorSelect");
+    var selectedIndex = colorSelect.selectedIndex;
+    
+    if (selectedIndex !== -1) {
+        colorSelect.remove(selectedIndex);
+    }
+}
 		</script>
 
 	</body>

@@ -1,1 +1,9 @@
 /*  your css code here. If applicable */
+document.getElementById('removeButton').addEventListener('click', function() {
+    var colorSelect = document.getElementById('colorSelect');
+    var selectedOption = colorSelect.options[colorSelect.selectedIndex];
+    
+    if (selectedOption) {
+        colorSelect.remove(colorSelect.selectedIndex);
+    }
+});
